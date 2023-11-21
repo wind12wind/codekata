@@ -1,0 +1,15 @@
+using System;
+
+public class Solution {
+    public int solution(int num1, int num2) {
+        int answer = num1 * num2;
+        return answer;
+    }
+} // 문제2번 두수의 곱
+
+public class Solution {
+    public int solution(int num1, int num2) {
+        int answer = num1 / num2;
+        return answer;
+    }
+} // 문제3 몫 구하기
