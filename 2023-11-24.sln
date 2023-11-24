@@ -1,0 +1,25 @@
+using System;
+
+public class Solution {
+    public int solution(int num1, int num2) {
+      
+        int answer = num1 + num2;
+        return answer;
+    }
+}// 두수의합
+
+using System;
+
+public class Solution {
+    public int solution(int num1, int num2) {
+        int answer;
+        double temp = 0;
+        double num = 0;
+        
+        temp = (double)num1/(double)num2;
+        num = temp*1000;
+        answer = (int)num;
+
+        return answer;
+    }
+} //두수의 나눗셈
