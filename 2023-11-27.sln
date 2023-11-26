@@ -1,0 +1,38 @@
+public class Solution {
+    public string solution(int num)
+    {
+     if( num % 2 == 0)
+     {
+         return "Even";
+     }
+        else 
+            return "Odd";
+    }
+} // 짝수와 홀수
+
+public class Solution {
+    public double solution(int[] arr) {
+        double sum = 0;
+        for (int i = 0; i < arr.Length; i++)
+        {
+            sum += arr[i];
+        }
+        double answer = sum / arr.Length;
+        return answer;
+    }
+} // 평균 구하기
+
+using System;
+
+public class Solution {
+    public int solution(int n) {
+      
+        int answer = 0;
+          while(n>0)
+        {
+            answer += n%10;
+            n = n / 10;
+        }
+        return answer;
+    }
+} 자리수 더하기
