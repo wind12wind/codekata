@@ -33,4 +33,4 @@ public class Solution {
         }
         return count;
     }
-}
+} //자연수뒤집어 배열로 만들기
