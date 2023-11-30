@@ -1,0 +1,19 @@
+public class Solution {
+    public int solution(string s) {
+        int answer = int.Parse(s);
+        return answer;
+    }
+} // 문자열 S 를 정수로 변환.
+
+using System;
+public class Solution {
+    public long solution(long n) {
+        double x = Math.Sqrt(n);
+        long answer = -1;
+        
+        if(x % 1 == 0) {
+            answer = (long)Math.Pow(x + 1 , 2);
+        }
+        return answer;
+    }
+} //정수 제곱근 판별
