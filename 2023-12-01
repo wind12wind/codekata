@@ -1,0 +1,12 @@
+using System;
+public class Solution {
+    public long solution(long n) {
+        long answer = 0;
+        char[] charArray = n.ToString().ToCharArray();
+        
+       Array.Sort(charArray, (a, b) => b.CompareTo(a));
+        
+        answer = long.Parse(new string(charArray));
+        return answer;
+    }
+} //정수 내림차순 정렬
