@@ -1,0 +1,27 @@
+using System;
+public class Solution {
+    public int[] solution(int[] arr, int divisor) {
+        // 나누어 떨어지는 값들을 저장할 동적 배열
+        int count = 0;
+        for (int i = 0; i < arr.Length; i++) {
+            if (arr[i] % divisor == 0) {
+                count++;
+            }
+        }
+
+        int[] answer = new int[count];
+        int index = 0;
+
+        for (int i = 0; i < arr.Length; i++) {
+            if (arr[i] % divisor == 0) {
+                answer[index++] = arr[i];
+            }
+        }
+
+        // 오름차순으로 정렬
+        Array.Sort(answer);
+
+        // 나누어 떨어지는 값이 하나도 없을 경우 -1을 담은 배열을 반환
+        return (answer.Length == 0) ? new int[] { -1 } : answer;
+    }
+} //나누어 떨어지는숫자 배열
