@@ -1,0 +1,11 @@
+using System;
+
+public class Solution {
+    public string solution(string s) {
+        char[] charArray = s.ToCharArray();
+        Array.Sort(charArray);
+        Array.Reverse(charArray);
+        string answer = new string(charArray);
+        return answer;
+    }
+} //문자열 내림차순 배열하기
