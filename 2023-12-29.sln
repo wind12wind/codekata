@@ -1,0 +1,24 @@
+using System;
+
+public class Example
+{
+    public static void Main()
+    {
+        String[] s;
+
+        Console.Clear();
+        s = Console.ReadLine().Split(' ');
+
+        int n = Int32.Parse(s[0]);
+        int m = Int32.Parse(s[1]);
+
+        for (int i = 0; i < m; i++) // m번 반복 (세로 길이)
+        {
+            for (int j = 0; j < n; j++) // n번 반복 (가로 길이)
+            {
+                Console.Write("*"); // 별 출력
+            }
+            Console.WriteLine(); // 줄 바꿈
+        }
+    }
+} //직사각형 별찍기
