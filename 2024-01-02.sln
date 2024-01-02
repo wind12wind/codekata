@@ -1,0 +1,16 @@
+public class Solution {
+    public int[] solution(int n, int m) {
+        int gcd = calculateGCD(n, m);
+        int lcm = (n * m) / gcd;
+        return new int[] {gcd, lcm};
+    }
+
+    private int calculateGCD(int a, int b) { 
+        while (b != 0) {
+            int r = a % b;
+            a = b;
+            b = r;
+        }
+        return a;
+    }
+} //최대공약수와 최소공배수
