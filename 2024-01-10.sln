@@ -3,12 +3,13 @@ using System;
 public class Solution {
     public int solution(string t, string p) {
         int answer = 0;
-        int pLength = p.Length;
-        int pValue = int.Parse(p);
+        long pValue = long.Parse(p);
 
-        for (int i = 0; i <= t.Length - pLength; i++) {
-            string substring = t.Substring(i, pLength);
-            if (int.Parse(substring) <= pValue) {
+        for (int i = 0; i <= t.Length - p.Length; i++) {
+            string subStr = t.Substring(i, p.Length);
+            long subValue = long.Parse(subStr);
+
+            if (subValue <= pValue) {
                 answer++;
             }
         }
