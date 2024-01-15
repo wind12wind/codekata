@@ -1,0 +1,14 @@
+public class Solution {
+    public string solution(string s, int n) {
+        string answer = "";
+        foreach (char c in s) {
+            if (char.IsLetter(c)) {
+                char offset = char.IsUpper(c) ? 'A' : 'a';
+                answer += (char)(((c + n - offset) % 26) + offset);
+            } else {
+                answer += c;
+            }
+        }
+        return answer;
+    }
+} //시저암호
