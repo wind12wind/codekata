@@ -1,0 +1,14 @@
+using System;
+
+public class Solution {
+    public string[] solution(string[] strings, int n) {
+        Array.Sort(strings, (s1, s2) => {
+            if (s1[n] != s2[n]) {
+                return s1[n].CompareTo(s2[n]);
+            } else {
+                return s1.CompareTo(s2);
+            }
+        });
+        return strings;
+    }
+} //문자열 내맘대로 정렬하기
