@@ -1,0 +1,21 @@
+using System;
+
+public class Solution {
+    public int[] solution(int[] array, int[,] commands) {
+        int[] answer = new int[commands.GetLength(0)];
+
+        for (int cmdIdx = 0; cmdIdx < commands.GetLength(0); cmdIdx++) {
+            int i = commands[cmdIdx, 0];
+            int j = commands[cmdIdx, 1];
+            int k = commands[cmdIdx, 2];
+
+            int[] subArray = new int[j - i + 1];
+            Array.Copy(array, i - 1, subArray, 0, j - i + 1);
+            Array.Sort(subArray);
+
+            answer[cmdIdx] = subArray[k - 1];
+        }
+
+        return answer;
+    }
+} //k번째수 정렬
