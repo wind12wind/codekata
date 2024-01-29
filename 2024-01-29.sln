@@ -21,3 +21,30 @@ public class Solution {
     }
 } //두개 뽑아서 더하기
 
+using System;
+using System.Collections.Generic;
+
+public class Solution {
+    public int[] solution(string s) {
+
+        Dictionary<char, int> lastPositions = new Dictionary<char, int>();
+        int[] answer = new int[s.Length];
+
+        for (int i = 0; i < s.Length; i++) {
+            char currentChar = s[i];
+
+            if (lastPositions.ContainsKey(currentChar)) 
+            {
+                answer[i] = i - lastPositions[currentChar];
+            } 
+            else 
+            {
+                answer[i] = -1;
+            }
+
+            lastPositions[currentChar] = i;
+        }
+
+        return answer;
+    }
+} //가장가까운 같은 글자
