@@ -74,3 +74,21 @@ public class Solution {
         return answer.ToString();
     }
 }//푸드파이트
+
+using System;
+
+public class Solution {
+    public int solution(int a, int b, int n) {
+        int answer = 0;
+
+        while (n >= a) 
+        {
+            int exchangedBottles = n / a * b;
+            answer += exchangedBottles;
+
+            n = n % a + exchangedBottles;
+        }
+
+        return answer;
+    }
+} //콜라문제
