@@ -92,3 +92,29 @@ public class Solution {
         return answer;
     }
 } //콜라문제
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Solution {
+    public int[] solution(int k, int[] score) {
+        List<int> hallOfFame = new List<int>();
+        int[] answer = new int[score.Length];
+
+        for (int day = 0; day < score.Length; day++) {
+            int currentScore = score[day];
+
+            hallOfFame.Add(currentScore);
+
+            hallOfFame = hallOfFame.OrderByDescending(x => x).ToList();
+            if (hallOfFame.Count > k) {
+                hallOfFame = hallOfFame.Take(k).ToList();
+            }
+
+            answer[day] = hallOfFame.LastOrDefault();
+        }
+
+        return answer;
+    }
+}//명예의전당
